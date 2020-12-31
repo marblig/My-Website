@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#gameContainer {
+  background-color: black;
+}
+
+#instructions {
+  color: white;
+  text-align: center;
+}
+
+#letter {
+  font-family: 'Staatliches', cursive;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+}
+
+#score {
+  color: white;
+  text-align: center;
+}
+
+#timer {
+  color: white;
+  text-align: center;
+}
+
+#links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 200px;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+#gitHub {
+  background-image: url(img/github_logo.png);
+}
+
+#codewars {
+  background-image: url(img/codewars_logo.png);
+}
+
+#freeCodeCamp {
+  background-image: url(img/freecodecamp_logo.png);
+}
