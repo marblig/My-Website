@@ -3,49 +3,225 @@
   padding: 0;
 }
 
+/* The Heading */
+
+#mynameis {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 3.333rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  padding-top: 3rem;
+}
+
+#marcus {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 9rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+}
+
+/* Subheader */
+
+h2 {
+  color: #111;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 72px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+/* Button */
+
+.main__button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #222222;
+  color: white;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.main__button::after {
+  content: '\25be';
+  float: right;
+}
+
+.main__button::after {
+  content: '\25be';
+  float: left;
+}
+
+/* Main Text */
+
+#p1 {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#p2 {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#p3 {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#p4 {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#p5 {
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 24px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* The Game */
+
 #gameContainer {
-  background-color: black;
+  display: grid;
+  height: 30rem;
+  background-color: #111;
 }
 
 #instructions {
   color: white;
   text-align: center;
+  font-family: 'Staatliches', cursive;
+}
+
+#tTl {
+  font-size: 4rem;
+}
+
+/* Start Game Animation */
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#s2s {
+  font-family: 'Bungee Outline', cursive;
+  font-size: 33px;
+  animation: blink 1.5s linear infinite;
 }
 
 #letter {
+  height: 7rem;
+  width: 7rem;
   font-family: 'Staatliches', cursive;
-  font-size: 5rem;
-  color: white;
+  font-size: 7rem;
   text-align: center;
+  justify-self: center;
+  color: white;
+  padding-bottom: 3rem;
+}
+
+#scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 #score {
   color: white;
   text-align: center;
+  font-family: 'Staatliches', cursive;
+  font-size: 3rem;
+}
+
+#highScore {
+  color: white;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+  font-size: 3rem;
 }
 
 #timer {
   color: white;
   text-align: center;
+  font-family: 'Bungee Outline', cursive;
+  font-size: 31px;
 }
+
+/* The Links */
 
 #links {
   display: flex;
   justify-content: space-around;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .logo {
-  height: 200px;
-  width: 200px;
+  height: 7.5rem;
+  width: 7.5rem;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 .logo:hover {
   transform: scale(1.2);
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 #gitHub {

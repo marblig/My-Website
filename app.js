@@ -27,42 +27,52 @@ const letters = [
   'Z',
 ];
 let score = 0;
+let highScore = 0;
 let time = 20;
 let myTimer;
 let gameInProgress = false;
+
 
 function getRandomInt(range) {
   return Math.floor(Math.random() * range);
 }
 
 function preGame() {
-  //Give instructions
+  document.getElementById('letter').style.visibility = 'hidden';
+  showRl();
   time = 20;
-  score = 0;
+  document.getElementById('s2s').style.visibility = 'visible';
   document.addEventListener('keypress', (event) => {
-    if ((event.code = 'Space')) {
-      if (gameInProgress === true) {
-        //do nothing
-      } else {
+    if (event.code === 'Space') {
+      event.preventDefault();
+      if (gameInProgress === false) {
         startGame();
       }
     }
   });
-  document.getElementById('timer').innerHTML = `<p>${time}</p>`;
-  document.getElementById('score').innerHTML = `<h2>${score}</h2>`;
+  document.getElementById('timer').innerHTML = `<p>Time<br> ${time}</p>`;
+  document.getElementById('score').innerHTML = `<p>Score <br> ${score}</p>`;
+  document.getElementById(
+    'highScore'
+  ).innerHTML = `<p>High Score <br> ${highScore}</p>`;
 }
 
 function startGame() {
   //Start timer
   //Display score
+  document.getElementById('letter').style.visibility = 'visible';
+  document.getElementById('s2s').style.visibility = 'hidden';
+  score = 0;
   gameInProgress = true;
   myTimer = setInterval(decrementTimer, 1000);
   let letter = showRl();
   document.addEventListener('keypress', (event) => {
-    if (event.key.toUpperCase() === letter) {
+    if (gameInProgress === true && event.key.toUpperCase() === letter) {
       incrementCounter();
-      if (gameInProgress) {
+      if (gameInProgress === true) {
         letter = showRl();
+      } else {
+        preGame();
       }
     }
   });
@@ -71,6 +81,14 @@ function startGame() {
 function endGame() {
   gameInProgress = false;
   clearInterval(myTimer);
+  if (score > highScore) {
+    highScore = score;
+  } else {
+    highScore = highScore;
+  }
+  document.getElementById(
+    'highScore'
+  ).innerHTML = `<h2>High Score: ${highScore}</h2>`;
   preGame();
 }
 
@@ -84,7 +102,7 @@ function showRl() {
 
 function incrementCounter() {
   score++;
-  document.getElementById('score').innerHTML = `<h2>${score}</h2>`;
+  document.getElementById('score').innerHTML = `<h2>Score <br> ${score}</h2>`;
 }
 
 var decrementTimer = function () {
@@ -92,7 +110,11 @@ var decrementTimer = function () {
   if (time === 0) {
     endGame();
   }
-  document.getElementById('timer').innerHTML = `<p>${time}</p>`;
+  document.getElementById('timer').innerHTML = `<p>Time <br> ${time}</p>`;
 };
 
 preGame();
+
+//Problems:
+
+// the scores moves to accomadate the letters once the game has started
