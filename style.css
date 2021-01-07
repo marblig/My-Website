@@ -50,10 +50,6 @@ header {
 
 /* Header */
 
-.myName {
-  
-}
-
 #mynameis {
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
@@ -91,19 +87,23 @@ h2 {
 /* Main Text */
 
 #me {
+  justify-self: center;
   max-width: 100%;
   border-radius: 0.5rem;
+  /* margin-left: 2rem; */
 }
 
 #mainText1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  
 }
 
 #mainText2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
+  
 }
 
 @media only screen and (max-width: 900px) {
@@ -111,6 +111,7 @@ h2 {
   #me {
     justify-self: center;
     margin-bottom: 2rem;
+    margin-left: none;
   }
   
   #mainText1 {
@@ -127,8 +128,8 @@ h2 {
 
 .mainP {
   color: #111;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
+  font-family: 'Georgia', serif;
+  font-size: 17px;
   line-height: 24px;
   margin: 0 0 24px;
   text-align: justify;
