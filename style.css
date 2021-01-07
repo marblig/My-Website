@@ -64,7 +64,7 @@ header {
 #marcus {
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: 9rem;
+  font-size: min(max(6em, 4vw), 7em);
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
