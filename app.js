@@ -102,7 +102,7 @@ function showRl() {
 
 function incrementCounter() {
   score++;
-  document.getElementById('score').innerHTML = `<h2>Score <br> ${score}</h2>`;
+  document.getElementById('score').innerHTML = `<p>Score<br> ${score}</p>`;
 }
 
 var decrementTimer = function () {

@@ -3,7 +3,56 @@
   padding: 0;
 }
 
-/* The Heading */
+a {
+  color: #111;
+  text-decoration: underline;
+}
+/* Nav */
+
+nav {
+  justify-self: end;
+  padding-right: 1vw;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  margin: 0em 1em 0em 1em;
+  border-bottom: 0.2rem;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-style: solid;
+  border-color: #222222;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #222222;
+}
+
+#header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 10vh;
+}
+
+header {
+  justify-self: start;
+  padding-left: 1vw;
+}
+
+/* Header */
+
+.myName {
+  
+}
 
 #mynameis {
   color: #111;
@@ -39,82 +88,44 @@ h2 {
   padding-top: 1rem;
 }
 
-/* Button */
-
-.main__button {
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background: #222222;
-  color: white;
-  text-align: center;
-  transition: background 0.2s;
-}
-
-.main__button::after {
-  content: '\25be';
-  float: right;
-}
-
-.main__button::after {
-  content: '\25be';
-  float: left;
-}
-
 /* Main Text */
 
-#p1 {
-  color: #111;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  margin: 0 0 24px;
-  text-align: justify;
-  text-justify: inter-word;
-  padding-left: 3rem;
-  padding-right: 3rem;
+#me {
+  max-width: 100%;
+  border-radius: 0.5rem;
 }
 
-#p2 {
-  color: #111;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  margin: 0 0 24px;
-  text-align: justify;
-  text-justify: inter-word;
-  padding-left: 3rem;
-  padding-right: 3rem;
+#mainText1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-#p3 {
-  color: #111;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  margin: 0 0 24px;
-  text-align: justify;
-  text-justify: inter-word;
-  padding-left: 3rem;
-  padding-right: 3rem;
+#mainText2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
 }
 
-#p4 {
-  color: #111;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  margin: 0 0 24px;
-  text-align: justify;
-  text-justify: inter-word;
-  padding-left: 3rem;
-  padding-right: 3rem;
+@media only screen and (max-width: 900px) {
+
+  #me {
+    justify-self: center;
+    margin-bottom: 2rem;
+  }
+  
+  #mainText1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  #mainText2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
 }
 
-#p5 {
+.mainP {
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 14px;
@@ -130,7 +141,7 @@ h2 {
 
 #gameContainer {
   display: grid;
-  height: 30rem;
+  height: 100vh;
   background-color: #111;
 }
 
