@@ -64,7 +64,7 @@ header {
 #marcus {
   color: #111;
   font-family: 'Helvetica Neue', sans-serif;
-  font-size: min(max(6em, 4vw), 7em);
+  font-size: min(max(14em, 7vw), 8em);
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
@@ -90,20 +90,17 @@ h2 {
   justify-self: center;
   max-width: 100%;
   border-radius: 0.5rem;
-  /* margin-left: 2rem; */
 }
 
 #mainText1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  
 }
 
 #mainText2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 2rem;
-  
 }
 
 @media only screen and (max-width: 900px) {
