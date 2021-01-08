@@ -141,6 +141,7 @@ h2 {
   display: grid;
   height: 100vh;
   background-color: #111;
+  margin: 5em 0 5em 0;
 }
 
 #instructions {
